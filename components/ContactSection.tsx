@@ -62,7 +62,7 @@ export function ContactSection() {
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-terracotta-500 focus:outline-none"
               placeholder="Votre nom"
             />
           </div>
@@ -72,7 +72,7 @@ export function ContactSection() {
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-terracotta-500 focus:outline-none"
               placeholder="Pour qu'on puisse vous répondre"
             />
           </div>
@@ -83,7 +83,7 @@ export function ContactSection() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               rows={4}
-              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-terracotta-500 focus:outline-none"
               placeholder="Votre message"
             />
           </div>
@@ -93,7 +93,7 @@ export function ContactSection() {
           <button
             type="submit"
             disabled={sending}
-            className="w-full rounded-full bg-orange-600 py-3 font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-stone-300"
+            className="w-full rounded-full bg-terracotta-600 py-3 font-semibold text-white transition hover:bg-terracotta-700 disabled:cursor-not-allowed disabled:bg-stone-300"
           >
             {sending ? "Envoi en cours..." : "Envoyer le message"}
           </button>

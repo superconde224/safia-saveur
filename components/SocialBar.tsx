@@ -9,7 +9,7 @@ import {
 
 export function SocialBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-20 border-t border-orange-100 bg-white px-4 py-2">
+    <div className="fixed inset-x-0 bottom-0 z-20 border-t border-terracotta-100 bg-white px-4 py-2">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-1.5 text-center sm:flex-row sm:justify-between sm:text-left">
         <div className="text-xs text-stone-500">
           <span className="font-semibold text-stone-800">{RESTAURANT_NAME}</span>
@@ -22,7 +22,7 @@ export function SocialBar() {
         <div className="flex items-center gap-3">
           <a
             href="#contact-form"
-            className="rounded-md border border-orange-600 px-3 py-1 text-xs font-medium text-orange-600 transition hover:bg-orange-50"
+            className="rounded-md border border-terracotta-600 px-3 py-1 text-xs font-medium text-terracotta-600 transition hover:bg-terracotta-50"
           >
             Nous contacter
           </a>
@@ -32,7 +32,7 @@ export function SocialBar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Nous contacter sur WhatsApp"
-            className="text-stone-500 transition hover:text-orange-600"
+            className="text-stone-500 transition hover:text-terracotta-600"
           >
             <WhatsAppIcon className="h-5 w-5" />
           </a>
@@ -41,7 +41,7 @@ export function SocialBar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Suivez-nous sur Facebook"
-            className="text-stone-500 transition hover:text-orange-600"
+            className="text-stone-500 transition hover:text-terracotta-600"
           >
             <FacebookIcon className="h-5 w-5" />
           </a>
@@ -50,7 +50,7 @@ export function SocialBar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Suivez-nous sur TikTok"
-            className="text-stone-500 transition hover:text-orange-600"
+            className="text-stone-500 transition hover:text-terracotta-600"
           >
             <TikTokIcon className="h-5 w-5" />
           </a>

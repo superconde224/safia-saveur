@@ -8,7 +8,7 @@ export function Header({ onOpenCart }: { onOpenCart: () => void }) {
   const { itemCount } = useCart();
 
   return (
-    <header className="sticky top-0 z-30 border-b border-orange-100 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-terracotta-100 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2">
         <a href="#top" className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -19,7 +19,7 @@ export function Header({ onOpenCart }: { onOpenCart: () => void }) {
         <div className="flex items-center gap-3">
           <a
             href="#contact-form"
-            className="hidden rounded-md border border-orange-600 px-4 py-1.5 text-sm font-medium text-orange-600 transition hover:bg-orange-50 sm:inline-block"
+            className="hidden rounded-md border border-terracotta-600 px-4 py-1.5 text-sm font-medium text-terracotta-600 transition hover:bg-terracotta-50 sm:inline-block"
           >
             Nous contacter
           </a>
@@ -27,11 +27,11 @@ export function Header({ onOpenCart }: { onOpenCart: () => void }) {
           <button
             onClick={onOpenCart}
             aria-label="Ouvrir le panier"
-            className="relative flex h-10 w-10 items-center justify-center rounded-full bg-orange-50 text-orange-700 transition hover:bg-orange-100"
+            className="relative flex h-10 w-10 items-center justify-center rounded-full bg-terracotta-50 text-terracotta-700 transition hover:bg-terracotta-100"
           >
             <CartIcon className="h-5 w-5" />
             {itemCount > 0 && (
-              <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-orange-600 px-1 text-xs font-semibold text-white">
+              <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-terracotta-600 px-1 text-xs font-semibold text-white">
                 {itemCount}
               </span>
             )}

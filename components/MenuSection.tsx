@@ -24,8 +24,8 @@ export function MenuSection() {
             onClick={() => setActiveCategory(category.id)}
             className={`shrink-0 rounded-full px-3.5 py-1.5 text-sm font-medium transition ${
               activeCategory === category.id
-                ? "bg-orange-600 text-white"
-                : "bg-orange-50 text-stone-600 hover:bg-orange-100"
+                ? "bg-terracotta-600 text-white"
+                : "bg-terracotta-50 text-stone-600 hover:bg-terracotta-100"
             }`}
           >
             {category.label}

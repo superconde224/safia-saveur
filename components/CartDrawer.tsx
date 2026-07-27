@@ -27,7 +27,7 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
       <div className="relative flex h-full w-full max-w-sm flex-col bg-white shadow-xl">
         {step === "cart" ? (
           <>
-            <div className="flex items-center justify-between border-b border-orange-100 px-4 py-4">
+            <div className="flex items-center justify-between border-b border-terracotta-100 px-4 py-4">
               <h2 className="text-lg font-semibold text-stone-900">Votre panier</h2>
               <button onClick={handleClose} aria-label="Fermer" className="text-stone-400 hover:text-stone-600">
                 ✕
@@ -49,7 +49,7 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
                           className="h-12 w-12 shrink-0 rounded-lg object-cover"
                         />
                       ) : (
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-2xl">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-terracotta-50 text-2xl">
                           {line.product.image}
                         </div>
                       )}
@@ -57,11 +57,11 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
                         <p className="text-sm font-medium text-stone-900">{line.product.name}</p>
                         <p className="text-sm text-stone-500">{formatPrice(line.product.price)}</p>
                       </div>
-                      <div className="flex items-center gap-2 rounded-full bg-orange-50 px-1.5 py-1">
+                      <div className="flex items-center gap-2 rounded-full bg-terracotta-50 px-1.5 py-1">
                         <button
                           onClick={() => removeItem(line.product.id)}
                           aria-label={`Retirer un ${line.product.name}`}
-                          className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-orange-700 shadow-sm"
+                          className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-terracotta-700 shadow-sm"
                         >
                           −
                         </button>
@@ -69,7 +69,7 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
                         <button
                           onClick={() => addItem(line.product.id)}
                           aria-label={`Ajouter un ${line.product.name}`}
-                          className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-orange-700 shadow-sm"
+                          className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-terracotta-700 shadow-sm"
                         >
                           +
                         </button>
@@ -80,7 +80,7 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
               )}
             </div>
 
-            <div className="border-t border-orange-100 px-4 py-4">
+            <div className="border-t border-terracotta-100 px-4 py-4">
               <div className="mb-3 flex items-center justify-between text-sm font-medium text-stone-700">
                 <span>Total</span>
                 <span>{formatPrice(subtotal)}</span>
@@ -88,7 +88,7 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
               <button
                 onClick={() => setStep("form")}
                 disabled={lines.length === 0}
-                className="w-full rounded-full bg-orange-600 py-3 font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-stone-300"
+                className="w-full rounded-full bg-terracotta-600 py-3 font-semibold text-white transition hover:bg-terracotta-700 disabled:cursor-not-allowed disabled:bg-stone-300"
               >
                 Passer la commande
               </button>

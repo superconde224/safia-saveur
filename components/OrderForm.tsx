@@ -61,7 +61,7 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
   return (
     <form onSubmit={handleSubmit} className="flex h-full flex-col">
       <div className="flex-1 space-y-4 overflow-y-auto px-4 py-4">
-        <button type="button" onClick={onBack} className="text-sm font-medium text-orange-700">
+        <button type="button" onClick={onBack} className="text-sm font-medium text-terracotta-700">
           ← Retour au panier
         </button>
 
@@ -70,7 +70,7 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-terracotta-500 focus:outline-none"
             placeholder="Votre nom"
           />
         </div>
@@ -81,7 +81,7 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             type="tel"
-            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-terracotta-500 focus:outline-none"
             placeholder="Votre numéro"
           />
         </div>
@@ -95,7 +95,7 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
                 type="button"
                 onClick={() => setMode(m.id)}
                 className={`rounded-full px-3 py-1.5 text-sm font-medium transition ${
-                  mode === m.id ? "bg-orange-600 text-white" : "bg-orange-50 text-stone-600"
+                  mode === m.id ? "bg-terracotta-600 text-white" : "bg-terracotta-50 text-stone-600"
                 }`}
               >
                 {m.label}
@@ -110,7 +110,7 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
             <input
               value={address}
               onChange={(e) => setAddress(e.target.value)}
-              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-terracotta-500 focus:outline-none"
               placeholder="Quartier, rue, repère..."
             />
           </div>
@@ -122,7 +122,7 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             rows={3}
-            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-terracotta-500 focus:outline-none"
             placeholder="Allergies, préférences..."
           />
         </div>
@@ -130,7 +130,7 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
         {error && <p className="text-sm text-red-600">{error}</p>}
       </div>
 
-      <div className="border-t border-orange-100 px-4 py-4">
+      <div className="border-t border-terracotta-100 px-4 py-4">
         <div className="mb-3 flex items-center justify-between text-sm font-medium text-stone-700">
           <span>Total</span>
           <span>{formatPrice(subtotal)}</span>
@@ -138,7 +138,7 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
         <button
           type="submit"
           disabled={sending}
-          className="w-full rounded-full bg-orange-600 py-3 font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-stone-300"
+          className="w-full rounded-full bg-terracotta-600 py-3 font-semibold text-white transition hover:bg-terracotta-700 disabled:cursor-not-allowed disabled:bg-stone-300"
         >
           {sending ? "Envoi en cours..." : "Envoyer la commande"}
         </button>
