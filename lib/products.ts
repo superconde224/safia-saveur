@@ -149,8 +149,8 @@ export const PRODUCTS: Product[] = [
   },
 ];
 
-/** Adresse email qui recevra les commandes — à remplacer par la vraie adresse du restaurant. */
-export const RESTAURANT_EMAIL = "commandes@safiasaveur.example";
+/** Adresse email qui recevra les commandes et les messages de contact. */
+export const RESTAURANT_EMAIL = "kemokoconde13@gmail.com";
 
 export const RESTAURANT_NAME = "Les Saveurs de Safia";
 export const RESTAURANT_PHONE = "+33 1 23 45 67 89"; // à remplacer
