@@ -134,8 +134,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "bissap",
     category: "boissons",
-    name: "Jus de bissap",
-    price: 4,
+    name: "Jus de bissap (50cl)",
+    price: 2.5,
     description: "Infusion rafraîchissante de fleurs d'hibiscus, sucrée et parfumée, parfois relevée de menthe ou de vanille.",
     image: "🥤",
     photo: "/images/jus-bissap.jpg",
@@ -143,8 +143,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "gingembre",
     category: "boissons",
-    name: "Jus de gingembre",
-    price: 4,
+    name: "Jus de gingembre (50cl)",
+    price: 2.5,
     description: "Jus de gingembre maison, rafraîchissant et épicé.",
     image: "🥤",
     photo: "/images/jus-gingembre.jpg",
@@ -152,8 +152,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "jus-baobab",
     category: "boissons",
-    name: "Jus de baobab",
-    price: 4.5,
+    name: "Jus de baobab (50cl)",
+    price: 2.5,
     description: "Jus onctueux au fruit de baobab, doux et légèrement acidulé, riche en vitamine C.",
     image: "🥤",
     photo: "/images/jus-baobab.jpg",
