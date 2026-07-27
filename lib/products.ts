@@ -149,14 +149,6 @@ export const PRODUCTS: Product[] = [
     image: "🍮",
     photo: "/images/thiakry.jpg",
   },
-  {
-    id: "beignets-sucres",
-    category: "desserts",
-    name: "Beignets sucrés",
-    price: 4.5,
-    description: "Beignets moelleux saupoudrés de sucre.",
-    image: "🍩",
-  },
 ];
 
 /** Adresse email qui recevra les commandes et les messages de contact. */
