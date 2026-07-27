@@ -14,9 +14,9 @@ export function ProductCard({ product }: { product: Product }) {
     <div className="flex flex-col overflow-hidden rounded-2xl border border-terracotta-100 bg-white shadow-sm transition hover:shadow-md">
       {product.photo ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={withBasePath(product.photo)} alt={product.name} className="h-28 w-full object-cover" />
+        <img src={withBasePath(product.photo)} alt={product.name} className="h-44 w-full object-cover" />
       ) : (
-        <div className="flex h-28 w-full items-center justify-center bg-terracotta-50 text-4xl">
+        <div className="flex h-44 w-full items-center justify-center bg-terracotta-50 text-5xl">
           {product.image}
         </div>
       )}
