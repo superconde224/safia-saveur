@@ -132,6 +132,15 @@ export const PRODUCTS: Product[] = [
     photo: "/images/jus-gingembre.jpg",
   },
   {
+    id: "jus-baobab",
+    category: "boissons",
+    name: "Jus de baobab",
+    price: 4.5,
+    description: "Jus onctueux au fruit de baobab, doux et légèrement acidulé, riche en vitamine C.",
+    image: "🥤",
+    photo: "/images/jus-baobab.jpg",
+  },
+  {
     id: "thiakry",
     category: "desserts",
     name: "Thiakry",
