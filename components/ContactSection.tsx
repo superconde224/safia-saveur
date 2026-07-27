@@ -34,13 +34,13 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact-form" className="mx-auto max-w-2xl px-4 py-14">
-      <h2 className="text-center text-2xl font-bold text-stone-900 sm:text-3xl">Nous contacter</h2>
-      <p className="mt-1 text-center text-stone-500">
+    <section id="contact-form" className="mx-auto max-w-2xl px-4 py-10">
+      <h2 className="text-center text-xl font-bold text-stone-900 sm:text-2xl">Nous contacter</h2>
+      <p className="mt-1 text-center text-sm text-stone-500">
         Une question, une remarque ? Écrivez-nous, on vous répond rapidement.
       </p>
 
-      <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+      <form onSubmit={handleSubmit} className="mt-6 space-y-3">
         <div>
           <label className="block text-sm font-medium text-stone-700">Nom</label>
           <input
