@@ -87,6 +87,14 @@ export const PRODUCTS: Product[] = [
     photo: "/images/mafe-poulet.jpg",
   },
   {
+    id: "mafe-viande",
+    category: "plats",
+    name: "Mafé à la viande",
+    price: 14,
+    description: "Sauce à la pâte d'arachide et à la tomate, morceaux de bœuf mijotés, servie avec du riz blanc.",
+    image: "🍲",
+  },
+  {
     id: "feuilles-manioc",
     category: "plats",
     name: "Feuilles de manioc",
