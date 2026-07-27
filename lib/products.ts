@@ -147,6 +147,7 @@ export const PRODUCTS: Product[] = [
     price: 5,
     description: "Dessert de couscous de mil, yaourt et vanille.",
     image: "🍮",
+    photo: "/images/thiakry.jpg",
   },
   {
     id: "beignets-sucres",
