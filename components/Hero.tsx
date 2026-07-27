@@ -7,8 +7,11 @@ export function Hero() {
         <p className="text-sm font-medium uppercase tracking-wide text-orange-600">Cuisine africaine maison</p>
         <h1 className="mt-2 text-3xl font-bold text-stone-900 sm:text-5xl">{RESTAURANT_NAME}</h1>
         <p className="mx-auto mt-4 max-w-xl text-stone-600">
-          Des plats préparés avec des produits frais et beaucoup d&apos;amour. Composez votre commande
-          en quelques clics, on s&apos;occupe du reste.
+          Des plats africains faits maison, généreux et pleins de saveurs. Commandez en ligne et
+          profitez d&apos;une cuisine authentique, préparée avec passion et livrée chez vous.
+        </p>
+        <p className="mx-auto mt-2 max-w-xl font-semibold text-orange-700">
+          Les Saveurs de Safia : l&apos;Afrique dans votre assiette !
         </p>
         <a
           href="#menu"
