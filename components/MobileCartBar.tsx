@@ -9,7 +9,7 @@ export function MobileCartBar({ onOpenCart }: { onOpenCart: () => void }) {
   if (itemCount === 0) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-12 z-30 border-t border-orange-100 bg-white px-4 py-3 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] sm:hidden">
+    <div className="fixed inset-x-0 bottom-[88px] z-30 border-t border-orange-100 bg-white px-4 py-3 shadow-[0_-2px_10px_rgba(0,0,0,0.06)] sm:hidden">
       <button
         onClick={onOpenCart}
         className="flex w-full items-center justify-between rounded-full bg-orange-600 px-4 py-3 text-white"

@@ -1,39 +1,69 @@
 import {
+  RESTAURANT_ADDRESS,
+  RESTAURANT_EMAIL,
   RESTAURANT_FACEBOOK_URL,
+  RESTAURANT_NAME,
+  RESTAURANT_PHONE,
   RESTAURANT_TIKTOK_URL,
   RESTAURANT_WHATSAPP_URL,
 } from "@/lib/products";
 
 export function SocialBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-20 flex h-12 items-center justify-center gap-6 border-t border-orange-100 bg-white">
-      <a
-        href={RESTAURANT_WHATSAPP_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Nous contacter sur WhatsApp"
-        className="text-stone-500 transition hover:text-orange-600"
-      >
-        <WhatsAppIcon className="h-5 w-5" />
-      </a>
-      <a
-        href={RESTAURANT_FACEBOOK_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Suivez-nous sur Facebook"
-        className="text-stone-500 transition hover:text-orange-600"
-      >
-        <FacebookIcon className="h-5 w-5" />
-      </a>
-      <a
-        href={RESTAURANT_TIKTOK_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Suivez-nous sur TikTok"
-        className="text-stone-500 transition hover:text-orange-600"
-      >
-        <TikTokIcon className="h-5 w-5" />
-      </a>
+    <div
+      id="contact"
+      className="fixed inset-x-0 bottom-0 z-20 border-t border-orange-100 bg-white px-4 py-2"
+    >
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-1.5 text-center sm:flex-row sm:justify-between sm:text-left">
+        <div className="text-xs text-stone-500">
+          <span className="font-semibold text-stone-800">{RESTAURANT_NAME}</span>
+          {" · "}
+          {RESTAURANT_ADDRESS}
+          {" · "}
+          {RESTAURANT_PHONE}
+        </div>
+
+        <div className="flex items-center gap-3">
+          <a
+            href={`mailto:${RESTAURANT_EMAIL}`}
+            className="rounded-md border border-orange-600 px-3 py-1 text-xs font-medium text-orange-600 transition hover:bg-orange-50"
+          >
+            Nous contacter
+          </a>
+
+          <a
+            href={RESTAURANT_WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Nous contacter sur WhatsApp"
+            className="text-stone-500 transition hover:text-orange-600"
+          >
+            <WhatsAppIcon className="h-5 w-5" />
+          </a>
+          <a
+            href={RESTAURANT_FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Suivez-nous sur Facebook"
+            className="text-stone-500 transition hover:text-orange-600"
+          >
+            <FacebookIcon className="h-5 w-5" />
+          </a>
+          <a
+            href={RESTAURANT_TIKTOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Suivez-nous sur TikTok"
+            className="text-stone-500 transition hover:text-orange-600"
+          >
+            <TikTokIcon className="h-5 w-5" />
+          </a>
+        </div>
+
+        <p className="text-[11px] text-stone-400">
+          © {new Date().getFullYear()} {RESTAURANT_NAME}. Tous droits réservés.
+        </p>
+      </div>
     </div>
   );
 }
