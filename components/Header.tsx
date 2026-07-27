@@ -16,18 +16,27 @@ export function Header({ onOpenCart }: { onOpenCart: () => void }) {
           <span className="text-lg font-bold text-stone-900">{RESTAURANT_NAME}</span>
         </a>
 
-        <button
-          onClick={onOpenCart}
-          aria-label="Ouvrir le panier"
-          className="relative flex h-10 w-10 items-center justify-center rounded-full bg-orange-50 text-orange-700 transition hover:bg-orange-100"
-        >
-          <CartIcon className="h-5 w-5" />
-          {itemCount > 0 && (
-            <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-orange-600 px-1 text-xs font-semibold text-white">
-              {itemCount}
-            </span>
-          )}
-        </button>
+        <div className="flex items-center gap-3">
+          <a
+            href="#contact"
+            className="hidden text-sm font-semibold uppercase tracking-wide text-orange-700 hover:text-orange-800 sm:inline-block"
+          >
+            Nous contacter
+          </a>
+
+          <button
+            onClick={onOpenCart}
+            aria-label="Ouvrir le panier"
+            className="relative flex h-10 w-10 items-center justify-center rounded-full bg-orange-50 text-orange-700 transition hover:bg-orange-100"
+          >
+            <CartIcon className="h-5 w-5" />
+            {itemCount > 0 && (
+              <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-orange-600 px-1 text-xs font-semibold text-white">
+                {itemCount}
+              </span>
+            )}
+          </button>
+        </div>
       </div>
     </header>
   );
