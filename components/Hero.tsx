@@ -14,7 +14,7 @@ export function Hero() {
           href="#menu"
           className="mt-6 inline-block rounded-full bg-orange-600 px-6 py-3 font-medium text-white shadow-sm transition hover:bg-orange-700"
         >
-          Voir le menu
+          Voir nos saveurs
         </a>
       </div>
     </section>
