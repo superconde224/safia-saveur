@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { MenuSection } from "@/components/MenuSection";
+import { ContactSection } from "@/components/ContactSection";
 import { CartDrawer } from "@/components/CartDrawer";
 import { MobileCartBar } from "@/components/MobileCartBar";
 import { SocialBar } from "@/components/SocialBar";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header onOpenCart={() => setCartOpen(true)} />
       <Hero />
       <MenuSection />
+      <ContactSection />
       <MobileCartBar onOpenCart={() => setCartOpen(true)} />
       <SocialBar />
       <CartDrawer isOpen={isCartOpen} onClose={() => setCartOpen(false)} />

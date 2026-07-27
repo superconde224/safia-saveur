@@ -1,6 +1,5 @@
 import {
   RESTAURANT_ADDRESS,
-  RESTAURANT_EMAIL,
   RESTAURANT_FACEBOOK_URL,
   RESTAURANT_NAME,
   RESTAURANT_PHONE,
@@ -10,10 +9,7 @@ import {
 
 export function SocialBar() {
   return (
-    <div
-      id="contact"
-      className="fixed inset-x-0 bottom-0 z-20 border-t border-orange-100 bg-white px-4 py-2"
-    >
+    <div className="fixed inset-x-0 bottom-0 z-20 border-t border-orange-100 bg-white px-4 py-2">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-1.5 text-center sm:flex-row sm:justify-between sm:text-left">
         <div className="text-xs text-stone-500">
           <span className="font-semibold text-stone-800">{RESTAURANT_NAME}</span>
@@ -25,7 +21,7 @@ export function SocialBar() {
 
         <div className="flex items-center gap-3">
           <a
-            href={`mailto:${RESTAURANT_EMAIL}`}
+            href="#contact-form"
             className="rounded-md border border-orange-600 px-3 py-1 text-xs font-medium text-orange-600 transition hover:bg-orange-50"
           >
             Nous contacter
