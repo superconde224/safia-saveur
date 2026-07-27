@@ -93,6 +93,7 @@ export const PRODUCTS: Product[] = [
     price: 14,
     description: "Sauce à la pâte d'arachide et à la tomate, morceaux de bœuf mijotés, servie avec du riz blanc.",
     image: "🍲",
+    photo: "/images/mafe-viande.jpg",
   },
   {
     id: "feuilles-manioc",
