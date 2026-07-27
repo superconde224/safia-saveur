@@ -1,15 +1,18 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { RESTAURANT_EMAIL } from "@/lib/products";
+import emailjs from "@emailjs/browser";
+import { EMAILJS_CONTACT_TEMPLATE_ID, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID } from "@/lib/emailjs-config";
 
 export function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
     if (!name.trim() || !message.trim()) {
@@ -17,20 +20,28 @@ export function ContactSection() {
       return;
     }
     setError("");
+    setSending(true);
 
-    const subject = `Message de contact - ${name.trim()}`;
-    const body = [
-      `Nom : ${name.trim()}`,
-      email.trim() ? `Email / téléphone : ${email.trim()}` : null,
-      "",
-      message.trim(),
-    ]
-      .filter((line) => line !== null)
-      .join("\n");
-
-    const params = new URLSearchParams({ subject, body });
-    const query = params.toString().replace(/\+/g, "%20");
-    window.location.href = `mailto:${RESTAURANT_EMAIL}?${query}`;
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_CONTACT_TEMPLATE_ID,
+        {
+          customer_name: name.trim(),
+          customer_contact: email.trim() || "—",
+          message: message.trim(),
+        },
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      );
+      setName("");
+      setEmail("");
+      setMessage("");
+      setSent(true);
+    } catch {
+      setError("L'envoi a échoué. Réessaie dans un instant ou contacte-nous directement.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -40,47 +51,54 @@ export function ContactSection() {
         Une question, une remarque ? Écrivez-nous, on vous répond rapidement.
       </p>
 
-      <form onSubmit={handleSubmit} className="mt-6 space-y-3">
-        <div>
-          <label className="block text-sm font-medium text-stone-700">Nom</label>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
-            placeholder="Votre nom"
-          />
-        </div>
+      {sent ? (
+        <p className="mt-6 rounded-lg bg-green-50 px-4 py-3 text-center text-sm font-medium text-green-700">
+          Merci, votre message a bien été envoyé !
+        </p>
+      ) : (
+        <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+          <div>
+            <label className="block text-sm font-medium text-stone-700">Nom</label>
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+              placeholder="Votre nom"
+            />
+          </div>
 
-        <div>
-          <label className="block text-sm font-medium text-stone-700">Email ou téléphone</label>
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
-            placeholder="Pour qu'on puisse vous répondre"
-          />
-        </div>
+          <div>
+            <label className="block text-sm font-medium text-stone-700">Email ou téléphone</label>
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+              placeholder="Pour qu'on puisse vous répondre"
+            />
+          </div>
 
-        <div>
-          <label className="block text-sm font-medium text-stone-700">Message</label>
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            rows={4}
-            className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
-            placeholder="Votre message"
-          />
-        </div>
+          <div>
+            <label className="block text-sm font-medium text-stone-700">Message</label>
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              rows={4}
+              className="mt-1 w-full rounded-lg border border-stone-200 px-3 py-2 text-sm focus:border-orange-500 focus:outline-none"
+              placeholder="Votre message"
+            />
+          </div>
 
-        {error && <p className="text-sm text-red-600">{error}</p>}
+          {error && <p className="text-sm text-red-600">{error}</p>}
 
-        <button
-          type="submit"
-          className="w-full rounded-full bg-orange-600 py-3 font-semibold text-white transition hover:bg-orange-700"
-        >
-          Envoyer le message
-        </button>
-      </form>
+          <button
+            type="submit"
+            disabled={sending}
+            className="w-full rounded-full bg-orange-600 py-3 font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-stone-300"
+          >
+            {sending ? "Envoi en cours..." : "Envoyer le message"}
+          </button>
+        </form>
+      )}
     </section>
   );
 }

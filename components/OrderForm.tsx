@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 import { useCart } from "@/lib/cart-context";
 import { formatPrice } from "@/lib/format";
-import { buildOrderMailto, type OrderMode } from "@/lib/order";
+import { buildOrderEmailParams, type OrderMode } from "@/lib/order";
+import { EMAILJS_ORDER_TEMPLATE_ID, EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID } from "@/lib/emailjs-config";
 
 const MODES: { id: OrderMode; label: string }[] = [
   { id: "sur-place", label: "Sur place" },
@@ -19,8 +21,9 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
   const [address, setAddress] = useState("");
   const [notes, setNotes] = useState("");
   const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
     if (!name.trim() || !phone.trim()) {
@@ -32,8 +35,9 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
       return;
     }
     setError("");
+    setSending(true);
 
-    const mailtoUrl = buildOrderMailto(lines, subtotal, {
+    const params = buildOrderEmailParams(lines, subtotal, {
       name: name.trim(),
       phone: phone.trim(),
       mode,
@@ -41,9 +45,17 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
       notes,
     });
 
-    window.location.href = mailtoUrl;
-    clear();
-    onSubmitted();
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_ORDER_TEMPLATE_ID, params, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      });
+      clear();
+      onSubmitted();
+    } catch {
+      setError("L'envoi a échoué. Réessaie dans un instant ou contacte-nous directement.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -125,9 +137,10 @@ export function OrderForm({ onBack, onSubmitted }: { onBack: () => void; onSubmi
         </div>
         <button
           type="submit"
-          className="w-full rounded-full bg-orange-600 py-3 font-semibold text-white transition hover:bg-orange-700"
+          disabled={sending}
+          className="w-full rounded-full bg-orange-600 py-3 font-semibold text-white transition hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-stone-300"
         >
-          Envoyer la commande par email
+          {sending ? "Envoi en cours..." : "Envoyer la commande"}
         </button>
       </div>
     </form>
