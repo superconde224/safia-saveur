@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useCart } from "@/lib/cart-context";
 import { formatPrice } from "@/lib/format";
 import { OrderForm } from "@/components/OrderForm";
+import { withBasePath } from "@/lib/site-config";
 
 export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const { lines, subtotal, addItem, removeItem } = useCart();
@@ -40,9 +41,18 @@ export function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () =
                 <ul className="space-y-4">
                   {lines.map((line) => (
                     <li key={line.product.id} className="flex items-start gap-3">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-2xl">
-                        {line.product.image}
-                      </div>
+                      {line.product.photo ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={withBasePath(line.product.photo)}
+                          alt={line.product.name}
+                          className="h-12 w-12 shrink-0 rounded-lg object-cover"
+                        />
+                      ) : (
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-2xl">
+                          {line.product.image}
+                        </div>
+                      )}
                       <div className="flex-1">
                         <p className="text-sm font-medium text-stone-900">{line.product.name}</p>
                         <p className="text-sm text-stone-500">{formatPrice(line.product.price)}</p>

@@ -3,7 +3,8 @@
  * Pour ajouter / modifier / retirer un produit, édite simplement ce tableau.
  * - id : identifiant unique (ne pas dupliquer)
  * - category : doit correspondre à un id de CATEGORIES ci-dessous
- * - image : emoji utilisé comme visuel (remplaçable plus tard par une vraie photo)
+ * - image : emoji utilisé comme visuel de secours si aucune photo n'est fournie
+ * - photo : chemin vers une vraie photo dans public/images/ (optionnel, prioritaire sur l'emoji)
  * - price : en euros (nombre décimal, ex: 8.5)
  */
 
@@ -19,6 +20,7 @@ export type Product = {
   price: number;
   description: string;
   image: string;
+  photo?: string;
 };
 
 export const CATEGORIES: Category[] = [
@@ -69,6 +71,7 @@ export const PRODUCTS: Product[] = [
     price: 14,
     description: "Poulet mariné au citron et à la moutarde, mijoté avec des oignons caramélisés et quelques olives. Servi avec du riz blanc.",
     image: "🍋",
+    photo: "/images/yassa-poulet.jpg",
   },
   {
     id: "thiebou-dieune",
@@ -77,6 +80,7 @@ export const PRODUCTS: Product[] = [
     price: 15,
     description: "Riz brisé mijoté dans un bouillon tomaté, poisson farci aux herbes et légumes fondants (chou, carotte, manioc). Le plat national sénégalais.",
     image: "🐟",
+    photo: "/images/thieboudienne.jpg",
   },
   {
     id: "mafe",
@@ -109,6 +113,7 @@ export const PRODUCTS: Product[] = [
     price: 4,
     description: "Infusion rafraîchissante de fleurs d'hibiscus, sucrée et parfumée, parfois relevée de menthe ou de vanille.",
     image: "🥤",
+    photo: "/images/jus-bissap.jpg",
   },
   {
     id: "gingembre",
@@ -117,6 +122,7 @@ export const PRODUCTS: Product[] = [
     price: 4,
     description: "Jus de gingembre maison, rafraîchissant et épicé.",
     image: "🥤",
+    photo: "/images/jus-gingembre.jpg",
   },
   {
     id: "eau-minerale",

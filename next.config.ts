@@ -1,14 +1,10 @@
 import type { NextConfig } from "next";
-
-// Le site est exporté en statique et déployé sur GitHub Pages à
-// https://superconde224.github.io/safia-saveur/ — d'où le basePath.
-// Si un domaine personnalisé est branché plus tard (CNAME), retire basePath/assetPrefix.
-const repoBasePath = "/safia-saveur";
+import { BASE_PATH } from "./lib/site-config";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: repoBasePath,
-  assetPrefix: repoBasePath,
+  basePath: BASE_PATH,
+  assetPrefix: BASE_PATH,
   trailingSlash: true,
   images: {
     unoptimized: true,
