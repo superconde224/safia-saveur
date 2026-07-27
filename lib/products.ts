@@ -69,6 +69,15 @@ export const PRODUCTS: Product[] = [
     photo: "/images/thiep-poulet.jpg",
   },
   {
+    id: "thiep-viande",
+    category: "plats",
+    name: "Thiep à la viande",
+    price: 15,
+    description: "Riz brisé mijoté dans un bouillon tomaté, morceaux de bœuf mijotés et légumes fondants.",
+    image: "🥩",
+    photo: "/images/thiep-viande.jpg",
+  },
+  {
     id: "mafe-poulet",
     category: "plats",
     name: "Mafé au poulet",
