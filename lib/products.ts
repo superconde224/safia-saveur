@@ -81,7 +81,7 @@ export const PRODUCTS: Product[] = [
     id: "mafe-poulet",
     category: "plats",
     name: "Mafé au poulet",
-    price: 14,
+    price: 13,
     description: "Sauce à la pâte d'arachide et à la tomate, morceaux de poulet mijotés, servie avec du riz blanc.",
     image: "🍲",
     photo: "/images/mafe-poulet.jpg",
