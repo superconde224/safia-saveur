@@ -155,3 +155,8 @@ export const RESTAURANT_EMAIL = "commandes@safiasaveur.example";
 export const RESTAURANT_NAME = "Les Saveurs de Safia";
 export const RESTAURANT_PHONE = "+33 1 23 45 67 89"; // à remplacer
 export const RESTAURANT_ADDRESS = "Vitry-sur-Seine, France"; // à remplacer par l'adresse exacte
+
+// Réseaux sociaux — à remplacer par les vrais liens du restaurant.
+export const RESTAURANT_WHATSAPP_URL = "https://wa.me/33123456789";
+export const RESTAURANT_FACEBOOK_URL = "https://facebook.com/lessaveursdesafia";
+export const RESTAURANT_TIKTOK_URL = "https://tiktok.com/@lessaveursdesafia";
