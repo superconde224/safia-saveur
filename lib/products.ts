@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "thiebou-dieune",
     category: "plats",
-    name: "Thiéboudieune",
+    name: "Thiep au poisson",
     price: 15,
     description: "Riz brisé mijoté dans un bouillon tomaté, poisson farci aux herbes et légumes fondants (chou, carotte, manioc). Le plat national sénégalais.",
     image: "🐟",
