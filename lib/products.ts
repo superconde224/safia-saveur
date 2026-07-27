@@ -152,6 +152,6 @@ export const PRODUCTS: Product[] = [
 /** Adresse email qui recevra les commandes — à remplacer par la vraie adresse du restaurant. */
 export const RESTAURANT_EMAIL = "commandes@safiasaveur.example";
 
-export const RESTAURANT_NAME = "Safia Saveur";
+export const RESTAURANT_NAME = "Les Saveurs de Safia";
 export const RESTAURANT_PHONE = "+33 1 23 45 67 89"; // à remplacer
 export const RESTAURANT_ADDRESS = "Vitry-sur-Seine, France"; // à remplacer par l'adresse exacte

@@ -3,8 +3,8 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Safia Saveur",
-  description: "Commandez vos plats préférés chez Safia Saveur.",
+  title: "Les Saveurs de Safia",
+  description: "Commandez vos plats préférés chez Les Saveurs de Safia.",
 };
 
 export default function RootLayout({

@@ -1,18 +1,18 @@
 "use client";
 
-import { Logo } from "@/components/Logo";
 import { useCart } from "@/lib/cart-context";
 import { RESTAURANT_NAME } from "@/lib/products";
+import { withBasePath } from "@/lib/site-config";
 
 export function Header({ onOpenCart }: { onOpenCart: () => void }) {
   const { itemCount } = useCart();
 
   return (
     <header className="sticky top-0 z-30 border-b border-orange-100 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2">
         <a href="#top" className="flex items-center gap-2">
-          <Logo className="h-9 w-9" />
-          <span className="text-lg font-bold text-stone-900">{RESTAURANT_NAME}</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={withBasePath("/images/logo.jpg")} alt={RESTAURANT_NAME} className="h-12 w-12 rounded-lg object-cover" />
         </a>
 
         <button

@@ -1,6 +1,6 @@
-# Safia Saveur
+# Les Saveurs de Safia
 
-Site vitrine du restaurant **Safia Saveur** (cuisine africaine, Vitry-sur-Seine). Les clients composent leur commande dans le menu, puis l'envoient par email au restaurant en un clic — pas de backend, pas de base de données.
+Site vitrine du restaurant **Les Saveurs de Safia** (cuisine africaine, Vitry-sur-Seine). Les clients composent leur commande dans le menu, puis l'envoient par email au restaurant en un clic — pas de backend, pas de base de données.
 
 ## Fonctionnement
 
@@ -19,9 +19,7 @@ Tout est centralisé dans **`lib/products.ts`** :
 - `RESTAURANT_EMAIL` : **à remplacer** — c'est l'adresse qui recevra les commandes (actuellement un placeholder `commandes@safiasaveur.example`).
 - `RESTAURANT_NAME`, `RESTAURANT_PHONE`, `RESTAURANT_ADDRESS` : affichés dans le pied de page — à remplacer par les vraies infos.
 
-Le logo est un SVG généré temporairement dans `components/Logo.tsx`. Pour le remplacer par le vrai logo du restaurant :
-1. Dépose le fichier logo dans `public/` (ex: `public/logo.png`).
-2. Remplace le contenu de `components/Logo.tsx` par une balise `<img src="/logo.png" ... />` (ou `next/image` si tu retires l'export statique).
+Le logo affiché dans l'en-tête est `public/images/logo.jpg`, utilisé dans `components/Header.tsx`. Pour le changer, remplace simplement ce fichier (garde le même nom, ou mets à jour le chemin dans `Header.tsx`).
 
 ## Développement local
 
