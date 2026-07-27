@@ -12,7 +12,8 @@ export function Header({ onOpenCart }: { onOpenCart: () => void }) {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2">
         <a href="#top" className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBasePath("/images/logo.jpg")} alt={RESTAURANT_NAME} className="h-12 w-12 rounded-lg object-cover" />
+          <img src={withBasePath("/images/logo.png")} alt="" className="h-10 w-auto" />
+          <span className="text-lg font-bold text-stone-900">{RESTAURANT_NAME}</span>
         </a>
 
         <button
