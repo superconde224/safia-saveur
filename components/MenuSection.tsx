@@ -5,7 +5,7 @@ import { CATEGORIES, PRODUCTS } from "@/lib/products";
 import { ProductCard } from "@/components/ProductCard";
 
 export function MenuSection() {
-  const [activeCategory, setActiveCategory] = useState(CATEGORIES[0].id);
+  const [activeCategory, setActiveCategory] = useState("plats");
 
   const products = useMemo(
     () => PRODUCTS.filter((p) => p.category === activeCategory),
@@ -17,7 +17,7 @@ export function MenuSection() {
       <h2 className="text-2xl font-bold text-stone-900 sm:text-3xl">Nos saveurs</h2>
       <p className="mt-1 text-stone-500">Sélectionnez vos plats préférés et ajoutez-les au panier.</p>
 
-      <div className="mt-6 -mx-4 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
+      <div className="mt-6 -mx-4 flex justify-center gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
         {CATEGORIES.map((category) => (
           <button
             key={category.id}
