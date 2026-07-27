@@ -60,6 +60,15 @@ export const PRODUCTS: Product[] = [
     photo: "/images/thieboudienne.jpg",
   },
   {
+    id: "thiep-poulet",
+    category: "plats",
+    name: "Thiep au poulet",
+    price: 15,
+    description: "Riz brisé mijoté dans un bouillon tomaté, poulet braisé et légumes fondants (chou, carotte, aubergine).",
+    image: "🍗",
+    photo: "/images/thiep-poulet.jpg",
+  },
+  {
     id: "mafe-poulet",
     category: "plats",
     name: "Mafé au poulet",
