@@ -63,11 +63,19 @@ export const PRODUCTS: Product[] = [
     image: "🍗",
   },
   {
+    id: "yassa-poulet",
+    category: "plats",
+    name: "Yassa au poulet",
+    price: 14,
+    description: "Poulet mariné au citron et à la moutarde, mijoté avec des oignons caramélisés et quelques olives. Servi avec du riz blanc.",
+    image: "🍋",
+  },
+  {
     id: "thiebou-dieune",
     category: "plats",
     name: "Thiéboudieune",
     price: 15,
-    description: "Riz au poisson façon sénégalaise, légumes mijotés.",
+    description: "Riz brisé mijoté dans un bouillon tomaté, poisson farci aux herbes et légumes fondants (chou, carotte, manioc). Le plat national sénégalais.",
     image: "🐟",
   },
   {
@@ -99,7 +107,7 @@ export const PRODUCTS: Product[] = [
     category: "boissons",
     name: "Jus de bissap",
     price: 4,
-    description: "Jus d'hibiscus frais, légèrement sucré et parfumé.",
+    description: "Infusion rafraîchissante de fleurs d'hibiscus, sucrée et parfumée, parfois relevée de menthe ou de vanille.",
     image: "🥤",
   },
   {
