@@ -23,7 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
 
       <div className="flex flex-1 flex-col p-3">
         <h3 className="text-sm font-semibold text-stone-900">{product.name}</h3>
-        <p className="mt-0.5 flex-1 text-xs text-stone-500">{product.description}</p>
+        <p className="mt-0.5 flex-1 text-sm text-stone-500">{product.description}</p>
         <div className="mt-3 flex items-center justify-between">
           <span className="text-sm font-semibold text-orange-700">{formatPrice(product.price)}</span>
           {quantity === 0 ? (
