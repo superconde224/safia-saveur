@@ -35,9 +35,9 @@ export const PRODUCTS: Product[] = [
   {
     id: "pastels",
     category: "entrees",
-    name: "Pastels",
-    price: 6.5,
-    description: "Chaussons frits garnis de poisson ou de viande épicés, servis avec une sauce tomate pimentée.",
+    name: "Pastel (à l'unité)",
+    price: 0.6,
+    description: "Chausson frit garni de poisson ou de viande épicés, servi avec une sauce tomate pimentée.",
     image: "🥟",
     photo: "/images/pastels.jpg",
   },
