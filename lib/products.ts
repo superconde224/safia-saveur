@@ -161,8 +161,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "thiakry",
     category: "desserts",
-    name: "Thiakry",
-    price: 5,
+    name: "Thiakry (50cl)",
+    price: 2.5,
     description: "Dessert de couscous de mil, yaourt et vanille.",
     image: "🍮",
     photo: "/images/thiakry.jpg",
