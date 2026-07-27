@@ -19,7 +19,7 @@ export function Header({ onOpenCart }: { onOpenCart: () => void }) {
         <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className="hidden rounded-full border border-orange-600 px-4 py-1.5 text-sm font-medium text-orange-600 transition hover:bg-orange-50 sm:inline-block"
+            className="hidden rounded-md border border-orange-600 px-4 py-1.5 text-sm font-medium text-orange-600 transition hover:bg-orange-50 sm:inline-block"
           >
             Nous contacter
           </a>
