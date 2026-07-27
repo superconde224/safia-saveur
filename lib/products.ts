@@ -33,22 +33,6 @@ export const CATEGORIES: Category[] = [
 
 export const PRODUCTS: Product[] = [
   {
-    id: "salade-avocat",
-    category: "entrees",
-    name: "Salade d'avocat",
-    price: 7.5,
-    description: "Avocat frais, tomates, oignons rouges et vinaigrette maison.",
-    image: "🥑",
-  },
-  {
-    id: "beignets-crevettes",
-    category: "entrees",
-    name: "Beignets de crevettes",
-    price: 9,
-    description: "Beignets croustillants aux crevettes, sauce pimentée douce.",
-    image: "🍤",
-  },
-  {
     id: "pastels",
     category: "entrees",
     name: "Pastels",
@@ -56,22 +40,6 @@ export const PRODUCTS: Product[] = [
     description: "Chaussons frits garnis de poisson ou de viande épicés, servis avec une sauce tomate pimentée.",
     image: "🥟",
     photo: "/images/pastels.jpg",
-  },
-  {
-    id: "riz-gras",
-    category: "plats",
-    name: "Riz gras",
-    price: 14,
-    description: "Riz mijoté à la viande de bœuf, légumes et épices traditionnelles.",
-    image: "🍚",
-  },
-  {
-    id: "poulet-braise",
-    category: "plats",
-    name: "Poulet braisé",
-    price: 15,
-    description: "Poulet fermier mariné puis braisé, servi avec sa sauce.",
-    image: "🍗",
   },
   {
     id: "yassa-poulet",
@@ -90,14 +58,6 @@ export const PRODUCTS: Product[] = [
     description: "Riz brisé mijoté dans un bouillon tomaté, poisson farci aux herbes et légumes fondants (chou, carotte, manioc). Le plat national sénégalais.",
     image: "🐟",
     photo: "/images/thieboudienne.jpg",
-  },
-  {
-    id: "mafe",
-    category: "plats",
-    name: "Mafé",
-    price: 14,
-    description: "Sauce arachide onctueuse, viande de bœuf, riz blanc.",
-    image: "🍲",
   },
   {
     id: "mafe-poulet",
@@ -150,14 +110,6 @@ export const PRODUCTS: Product[] = [
     description: "Jus de gingembre maison, rafraîchissant et épicé.",
     image: "🥤",
     photo: "/images/jus-gingembre.jpg",
-  },
-  {
-    id: "eau-minerale",
-    category: "boissons",
-    name: "Eau minérale",
-    price: 2,
-    description: "Bouteille d'eau 50cl.",
-    image: "💧",
   },
   {
     id: "thiakry",
