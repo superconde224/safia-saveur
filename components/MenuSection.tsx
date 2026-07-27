@@ -14,8 +14,8 @@ export function MenuSection() {
 
   return (
     <section id="menu" className="mx-auto max-w-5xl px-4 py-10">
-      <h2 className="text-2xl font-bold text-stone-900 sm:text-3xl">Nos saveurs</h2>
-      <p className="mt-1 text-stone-500">Sélectionnez vos plats préférés et ajoutez-les au panier.</p>
+      <h2 className="text-center text-2xl font-bold text-stone-900 sm:text-3xl">Nos saveurs</h2>
+      <p className="mt-1 text-center text-stone-500">Sélectionnez vos plats préférés et ajoutez-les au panier.</p>
 
       <div className="mt-6 -mx-4 flex justify-center gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
         {CATEGORIES.map((category) => (
